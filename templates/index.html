@@ -10,10 +10,9 @@
 			<div class="container"> 
 				{% if forecast %}
 					<h1>{{ forecast}}!</h1>
-					<h1>Die besten Beizen!{{ businesses}}</h1>
-					<a href="{{ url_for('index') }}">Suche eine andere Stadt</a>
+					<a href="{{ url_for('index') }}">Look up another address</a>
 				{% else %}
-					<h1>Hallo, mein Freund, wo lebst du?</h1>
+					<h1>Hallo Wo lebst du?</h1>
 					<form action="/" class="form-inline">
 						<div class="form-group">
 							<input type="text" name="address" placeholder="Stadt, Land" class="
@@ -24,13 +23,7 @@
 						btn-primary">
 					</form>
 				{% endif %}
-				{% for business in businesseses%}
-					<h1>{{ business.address}}</h1>
-
-
-				{% endfor %}
-
-				<a href="{{ url_for('about') }}">Über dieses Projekt</a>
+				<a href="{{ url_for('about') }}">About this project</a>
 			</div>
 		</div>
 		
